@@ -1,0 +1,56 @@
+DiscreteTFDs
+See DiscreteTFDs/Copyright
+
+This is a collection of Matlab files for time-frequency
+analysis.  However, if you don't have Matlab, you can try Octave
+	http://www.che.wisc.edu/octave/
+or SciLab
+	http://www-rocq.inria.fr/scilab/
+
+These programs are either a result of my research or something that I
+found useful enough to spend the time to implement.  Included are: a
+rigorous implementation of time-frequency distributions (Cohen class),
+some quartic time-frequency distributions, chirplet decomposition based
+on maximum likelihood estimation, fractional Fourier transform,
+time-varying filtering, and other useful little utilities.  There
+isn't a manual, but you can find details in my papers on the 
+DiscreteTFDs website.
+
+The files are located in several sub-directories:
+
+  Chirplets  -- atomic decomposition based on maximum likelihood estimation
+  Demos      -- demonstrations to get you started
+  Symplectic -- symplectic transformations (fractional Fourier transform)
+  TypeI      -- routines for computing type I TFDs (the Cohen class)
+  TypeII     -- routines for computing type II TFDs
+  TypeIV     -- routines for computing type IV TFDs
+  Quartic    -- some quartic functions from my research
+  Utils      -- some useful utilities
+
+You will need to add something like the follwing lines to your 
+startup.m file (do not put a trailing '/' at the end of p!):
+
+	p = '/home/jeffo/matlab/DiscreteTFDs';
+	path(path, p)
+	DTFDPath(p)
+	clear p
+
+If you are using a Macintosh or MS Windows, then you will need to edit 
+DTFDPath.m to reflect your system path conventions.
+
+At the MATLAB prompt type "help DiscreteTFDs" for a list of available 
+functions, and use "help" to get information on each function.
+
+For someone who knows very little about the area of TFDs and wants to
+experiment, I would recommend using binomial2, born_jordan2, and
+spec2 with window lengths ranging from 16 to 128.
+
+In DiscreteTFDs_1.0, thanks to Steven Van Vaerenbergh for providing 
+updates to allow DiscreteTFDs to work with the latest version of the
+ Matlab Optimization toolbox.
+
+In DiscreteTFDs_1.2, thanks to Zhike Peng for providing updates of 
+parameterized time-frequency representation (PTFR) tools and corresponding 
+examples.
+
+Jeff O'Neill
